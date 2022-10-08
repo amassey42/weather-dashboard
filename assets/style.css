@@ -1,0 +1,7 @@
+body{
+background-color: salmon;
+}
+
+#currentWeather{
+    display:block;
+}
