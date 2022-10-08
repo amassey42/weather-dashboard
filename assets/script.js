@@ -38,7 +38,7 @@ function fetchData(cityName){
       currentWeatherDiv.append(cityPara, datePara, tempPara, windSpeedPara, humidityPara);
       
       
-
+      //function for the five day forcast data
       function fiveDayForcast(){
         let requestWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c81096e7c8f7e5aba437df08fab95a24`;
         fetch(requestWeather)
@@ -56,12 +56,13 @@ function fetchData(cityName){
             forcastDiv.style.flex = "25%";
           
             let parentDiv = document.createElement("div");
-            
+
+            //styling for the forcast table
             parentDiv.style.display ="block";
             parentDiv.style.border = "2px solid black"
             parentDiv.style.margin = "20px";
 
-
+            //getting forcast data on page
             let forcastTempPara = document.createElement("p");
             let forcastHumidityPara = document.createElement("p");
             let forcastWindSpeedPara = document.createElement("p");
@@ -81,15 +82,7 @@ function fetchData(cityName){
       fiveDayForcast();
 
     });
-  
-  // fetch(requestWeather)
-  //   .then(function (response) {
-  
-  //     return response.json();
-  //   })
-  //   .then(function (data) {
-  //     console.log(data);
-  //   });
+
   
 }
 
